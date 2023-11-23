@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7f7f7;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: futura;
+}
+body {
+  background-color: #f7f7f7;
+}
+#main {
+  overflow-x: hidden;
+}
+
+#page1 {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  padding: 0 1vw;
+}
+#page1 > :nth-child(1) {
+  margin-left: 10vw;
+}
+
+#page1 > h1 {
+  display: inline-block;
+  font-size: 15vw;
+  text-transform: uppercase;
+  line-height: 15vw;
+  letter-spacing: -0.5vw;
+}
+
+*::selection {
+  background-color: blue;
+}
+#video-container {
+  width: 100%;
+  height: 100vh;
+  margin-top: 1vw;
+  position: relative;
+}
+#video-container > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#video-container > #play {
+  padding: 3vw 2vw;
+  background-color: black;
+  color: #fff;
+  position: fixed;
+  font-family: futura;
+  border-radius: 50%;
+  font-size: 1vw;
+  opacity: 0;
+  scale: 0;
+}
+#play > h1 {
+  text-transform: uppercase;
+
+  font-size: 1.5vw;
+}
+
+#page2 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw 1vw;
+}
+#page2 > .elem {
+  overflow: hidden;
+  height: 100vh;
+  width: 31%;
+  position: relative;
+}
+.elem > img {
+  width: 100%;
+  height: 100%;
+}
+.elem > .dets {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25vw;
+  height: 10vh;
+  border-radius: 50px;
+  transition: all ease 0.1s;
+  overflow: hidden;
+}
+
+#elem1 > .dets {
+  background-color: #e5f0d6;
+}
+#elem2 > .dets {
+  background-color: #f5dfcf;
+}
+#elem3 > .dets {
+  background-color: #fff;
+}
+
+.elem > .dets:hover {
+  height: 50vh;
+  border-radius: 20px;
+}
+.dets-upper {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2vw;
+  position: relative;
+  top: 30%;
+}
+.dets-lower {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  opacity: 0;
+}
+.dets-lower > .left {
+  width: 50%;
+  height: 100%;
+}
+.dets-lower > .right {
+  width: 50%;
+  height: 100%;
+}
+.dets-lower > .left > img {
+  width: 100px;
+  height: 100px;
+}
+.dets-lower > .right > img {
+  width: 100px;
+  height: 100px;
+}
+.dets-lower > .right > p {
+  font-size: 0.8vmax;
+  text-align: left;
+  width: 80%;
+  margin-left: 1vw;
+}
+.dets-lower > .left > p {
+  font-size: 0.8vmax;
+  text-align: left;
+  width: 80%;
+  margin-left: 1vw;
+}
+#page3 {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+.p3-childs {
+  height: 80vh;
+  width: 45vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.p3-childs > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#crsr {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+#nav {
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav-part2 {
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+}
+#nav-part2 > .links {
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+}
+#nav-part2 > .links > a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+#nav-part2 > .icons {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 10vw;
+  height: 8vh;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+#nav-part2 > .icons > a {
+  text-decoration: none;
+  color: black;
+}
+#nav-part1 {
+  overflow: hidden;
+  height: 14.5vh;
+}
+#nav-part1 > svg {
+  display: block;
+}
+#page4 {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p4-left {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p4-left h1 {
+  font-size: 4vw;
+  margin-left: 5vw;
+}
+.p4-right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.p4-right > p {
+  width: 70%;
+  text-align: justify;
+  margin: 1vw 0;
+  position: relative;
+  font-weight: 100;
+}
+.p4-right > p > span::after {
+  content: "";
+  width: 0;
+  height: 0.1vw;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all ease 0.3s;
+}
+.p4-right > p > span:hover::after {
+  width: 45%;
+}
+#page5 {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+#page5 > h1 {
+  text-align: center;
+  font-size: 4vw;
+}
+#page5 > p {
+  font-family: gilroy;
+  font-weight: 600;
+  text-align: center;
+}
+#page5 > button {
+  width: 20vw;
+  height: 8vh;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 10vw;
+}
+#page5 > button:hover {
+  color: black;
+  background-color: #fff;
+  border: 1px solid black;
+}
+#page6 {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.p6-child {
+  width: 33%;
+  height: 100vh;
+}
+#page6 > .p6-child:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vw;
+  padding-left: 2vw;
+}
+#page6 > .p6-child:nth-child(1) > p {
+  width: 80%;
+  margin: 1vw 0;
+}
+#page6 > .p6-child:nth-child(2) {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://cdn.sanity.io/images/w8f1ak3c/production/943f8f43b76b4e030f41deddca1edd44170fee39-5504x8256.jpg/Christina-Maria-Jes-Lindsay-9143.jpg?fp-x=0.5&fp-y=0.5&w=640&h=947&fit=crop&crop=focalpoint&auto=format");
+}
+#page6 > .p6-child:nth-child(3) {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://cdn.sanity.io/images/w8f1ak3c/production/84da7b8b510e006ce0ca22769d93bb6c044945f6-5504x8256.jpg/Patricia-Work-Work-Good-Stories-Two-Good-Co.jpg?rect=0,56,5504,8144&w=640&h=947&fit=min&auto=format");
+}
+
+#page7 {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  #crsr {
+    display: none;
+  }
+  #page1 {
+    width: 100%;
+    min-height: 70vh;
+    padding: 0 2vw;
+    padding-top: 25vh;
+  }
+  #video-container {
+    position: relative;
+    height: 25vh;
+  }
+  #video-container > video {
+    height: 25vh;
+  }
+
+  #play {
+    display: none;
+  }
+
+  #page2 {
+    flex-direction: column;
+  }
+
+  #page2 > .elem {
+    height: 70vh;
+    width: 100%;
+    padding: 3vw 5vw;
+  }
+  .elem > .dets {
+    height: 6vh;
+    width: 80%;
+  }
+  .elem > .dets:hover {
+    height: 30vh;
+  }
+  .dets-lower > .right > p {
+    font-size: 1vmax;
+  }
+  .dets-lower > .left > p {
+    font-size: 1vmax;
+  }
+  #page3 {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .p3-childs {
+    width: 80%;
+    height: 50vh;
+  }
+  #page4 {
+    flex-direction: column;
+  }
+  #page4 > .p4-left {
+    width: 100%;
+  }
+  #page4 > .p4-right {
+    width: 100%;
+  }
+  #page4 > .p4-right > p {
+    width: 85%;
+    margin: 2vh 0;
+  }
+  #page4 > .p4-left > h1 {
+    font-size: 5vh;
+    width: 90%;
+  }
+  #page5 {
+    min-height: 50vh;
+  }
+  #page5 > h1 {
+    font-size: 5vh;
+  }
+  #page5 > button {
+    width: 40vh;
+  }
+  #page5 > p {
+    font-size: 3.5vh;
+  }
+  #page6 {
+    flex-direction: column;
+    gap: 10vh;
+  }
+  #page6 > .p6-child {
+    width: 100%;
+    height: 70vh;
+  }
+  #page6 > .p6-child:nth-child(1) > p {
+    margin-left: 5vh;
+    text-align: justify;
+  }
+  #page6 > .p6-child:nth-child(1) > h1 {
+    margin-left: 14vh;
+  }
+  #nav-part2 > .icons {
+    background-color: white;
+    width: 15vh;
+  }
+  #nav-part2 > .icons > a {
+    font-size: 5vw;
+  }
+
+  #nav-part2 > .links {
+    display: none;
+  }
+}
